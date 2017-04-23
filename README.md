@@ -1,24 +1,25 @@
-# README
+# React Rails Example
+The demo page is using `react-rails` to interact with web-server which is base on RoRs. The page support user to import database from a csv file, and the data can be processed in the background.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In the Gemfile, you can find a gem called `delay_job` which is help to do create other threading and process data asynchronous. And the result will be shown on the page immediately after creating data.   
 
-Things you may want to cover:
+### Usage
 
-* Ruby version
+After downloading, then execute:
 
-* System dependencies
+    $ bundle
 
-* Configuration
+Create database and initial data for the page:
 
-* Database creation
+    $ rake db:create db:migrate
 
-* Database initialization
+To run the server:
 
-* How to run the test suite
+    $ foreman start
 
-* Services (job queues, cache servers, search engines, etc.)
+React's components are located in `app\assets\components\`
 
-* Deployment instructions
+### Test
+All tests can be run with:
 
-* ...
+    $ rspec
