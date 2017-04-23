@@ -1,0 +1,67 @@
+<%= form_for(importer) do |f| %>
+  <% if importer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(importer.errors.count, "error") %> prohibited this importer from being saved:</h2>
+
+      <ul>
+      <% importer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :invoice_num %>
+    <%= f.text_field :invoice_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :invoice_date %>
+    <%= f.date_select :invoice_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :operation_date %>
+    <%= f.date_select :operation_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reporter %>
+    <%= f.text_field :reporter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status_id %>
+    <%= f.text_field :status_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :operation_id %>
+    <%= f.text_field :operation_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

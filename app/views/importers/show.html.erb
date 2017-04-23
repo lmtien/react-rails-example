@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @importer.company %>
+</p>
+
+<p>
+  <strong>Invoice num:</strong>
+  <%= @importer.invoice_num %>
+</p>
+
+<p>
+  <strong>Invoice date:</strong>
+  <%= @importer.invoice_date %>
+</p>
+
+<p>
+  <strong>Operation date:</strong>
+  <%= @importer.operation_date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @importer.amount %>
+</p>
+
+<p>
+  <strong>Reporter:</strong>
+  <%= @importer.reporter %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @importer.notes %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @importer.status %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @importer.category %>
+</p>
+
+<p>
+  <strong>Operation:</strong>
+  <%= @importer.operation %>
+</p>
+
+<%= link_to 'Edit', edit_importer_path(@importer) %> |
+<%= link_to 'Back', importers_path %>

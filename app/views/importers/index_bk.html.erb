@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Importers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Invoice num</th>
+      <th>Invoice date</th>
+      <th>Operation date</th>
+      <th>Amount</th>
+      <th>Reporter</th>
+      <th>Notes</th>
+      <th>Status</th>
+      <th>Category</th>
+      <th>Operation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @importers.each do |importer| %>
+      <tr>
+        <td><%= importer.company %></td>
+        <td><%= importer.invoice_num %></td>
+        <td><%= importer.invoice_date %></td>
+        <td><%= importer.operation_date %></td>
+        <td><%= importer.amount %></td>
+        <td><%= importer.reporter %></td>
+        <td><%= importer.notes %></td>
+        <td><%= importer.status.name %></td>
+        <td><%= importer.category %></td>
+        <td><%= importer.operation.name %></td>
+        <td><%= link_to 'Show', importer %></td>
+        <td><%= link_to 'Edit', edit_importer_path(importer) %></td>
+        <td><%= link_to 'Destroy', importer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Importer', new_importer_path %>
